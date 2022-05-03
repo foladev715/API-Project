@@ -2,6 +2,7 @@ import React from "react";
 import UserList from "./userList";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Footer from "./footer";
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -16,10 +17,13 @@ function App() {
     <UserList key={val.id} item={val} />
   ));
   return (
-    <div className="App">
-      <h1>Address Book App</h1>
-      <br />
-      <div className="address-card">{userElements}</div>
+    <div>
+      <div className="App">
+        <h1>Address Book App</h1>
+        <br />
+        <div className="address-card">{userElements}</div>
+      </div>
+      <Footer />
     </div>
   );
 }
